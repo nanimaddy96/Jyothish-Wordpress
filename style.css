@@ -1,0 +1,64 @@
+/*
+Theme Name: Theme Name
+Theme URI: https://example.com/theme-name
+Author: Your Name
+Author URI: https://example.com
+Description: Modern WordPress theme with full site editing support
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: textdomain
+Tags: custom-background, custom-logo, custom-menu, featured-images, block-styles, full-site-editing
+*/
+
+/* Base Styles */
+:root {
+    --wp--preset--color--primary: #3366cc;
+    --wp--preset--color--secondary: #ff6600;
+    --wp--preset--color--dark: #222222;
+    --wp--preset--color--light: #f8f9fa;
+}
+
+body {
+    font-family: var(--wp--preset--font-family--system-font);
+    line-height: 1.6;
+    color: var(--wp--preset--color--dark);
+    background: var(--wp--preset--color--light);
+    margin: 0;
+}
+
+a {
+    color: var(--wp--preset--color--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--wp--preset--color--secondary);
+}
+
+/* Layout */
+.site-header, 
+.site-footer {
+    padding: 2rem;
+}
+
+.site-main {
+    padding: 2rem 0;
+    max-width: var(--wp--style--global--content-size);
+    margin: 0 auto;
+}
+
+/* WordPress Alignment */
+.alignwide {
+    max-width: var(--wp--style--global--wide-size);
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .site-main {
+        padding: 1rem;
+    }
+}
