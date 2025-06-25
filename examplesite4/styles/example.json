@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "foreground": "#ffffff",
+      "background": "#000000"
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "small",
+          "size": "14px",
+          "slug": "small"
+        },
+        {
+          "name": "medium",
+          "size": "18px",
+          "slug": "medium"
+        },
+        {
+          "name": "large",
+          "size": "24px",
+          "slug": "large"
+        }
+      ]
+    }
+  }
+}

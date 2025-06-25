@@ -1,0 +1,42 @@
+<!-- templates/archive.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <?php include 'parts/header.html'; ?>
+
+  <section class="archive-section">
+    <div class="container">
+      <h1>Archive</h1>
+      <div class="projects">
+        <?php
+        // Example data for projects
+        $projects = [
+          [
+            'title' => 'Project 1',
+            'description' => 'Description of Project 1',
+            'image_url' => 'path/to/image1.jpg'
+          ],
+          [
+            'title' => 'Project 2',
+            'description' => 'Description of Project 2',
+            'image_url' => 'path/to/image2.jpg'
+          ]
+        ];
+
+        foreach ($projects as $project) {
+          render_project_card($project['title'], $project['description'], $project['image_url']);
+        }
+        ?>
+      </div>
+    </div>
+  </section>
+
+  <?php include 'parts/footer.html'; ?>
+</body>
+</html>

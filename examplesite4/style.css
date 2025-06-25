@@ -1,0 +1,320 @@
+<<<<<<< HEAD
+/*
+Theme Name: Theme Name
+Theme URI: https://example.com/theme-name
+Author: Your Name
+Author URI: https://example.com
+Description: Modern WordPress theme with full site editing support
+Version: 1.0
+Requires at least: 6.0
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: textdomain
+Tags: custom-background, custom-logo, custom-menu, featured-images, block-styles, full-site-editing
+*/
+
+/* Base Styles */
+:root {
+    --wp--preset--color--primary: #3366cc;
+    --wp--preset--color--secondary: #ff6600;
+    --wp--preset--color--dark: #222222;
+    --wp--preset--color--light: #f8f9fa;
+}
+
+body {
+    font-family: var(--wp--preset--font-family--system-font);
+    line-height: 1.6;
+    color: var(--wp--preset--color--dark);
+    background: var(--wp--preset--color--light);
+    margin: 0;
+}
+
+a {
+    color: var(--wp--preset--color--primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--wp--preset--color--secondary);
+}
+
+/* Layout */
+.site-header, 
+.site-footer {
+    padding: 2rem;
+}
+
+.site-main {
+    padding: 2rem 0;
+    max-width: var(--wp--style--global--content-size);
+    margin: 0 auto;
+}
+
+/* WordPress Alignment */
+.alignwide {
+    max-width: var(--wp--style--global--wide-size);
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .site-main {
+        padding: 1rem;
+    }
+=======
+/*
+Theme Name: Your Portfolio Theme
+Theme URI: https://example.com/portfolio-theme 
+Description: A clean and modern portfolio theme for showcasing projects.
+Author: Your Name
+Author URI: https://example.com 
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: your-portfolio-theme
+*/
+
+/* Your CSS styles go here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header, #header {
+  background: #222;
+  color: #fff;
+  padding: 0;
+}
+
+.header .container, #header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #ff9800;
+}
+
+.hero-section {
+  background: linear-gradient(120deg, #ff9800 0%, #ff5722 100%);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0 3rem 0;
+}
+
+.hero-section .btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: #fff;
+  color: #ff5722;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-section .btn:hover {
+  background: #ff5722;
+  color: #fff;
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  z-index: 1;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 0; height: 0;
+  background: rgba(255,152,0,0.2);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  z-index: -1;
+}
+.btn:hover {
+  color: #fff;
+  background: #ff9800;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(255,152,0,0.15);
+}
+.btn:hover::after {
+  width: 200%; height: 500%;
+}
+
+.about-section, .portfolio-section {
+  background: #fff;
+  margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 2rem 0;
+}
+
+.about-section h2, .portfolio-section h2 {
+  text-align: center;
+  color: #ff5722;
+  margin-bottom: 1.5rem;
+}
+
+.projects {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  opacity: 0;
+  animation: cardPop 0.8s cubic-bezier(.4,2,.6,1) forwards;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  margin: 0.5rem 0 0.3rem 0;
+  color: #ff9800;
+}
+
+.project-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(60px) scale(0.98);}
+  to   { opacity: 1; transform: translateY(0) scale(1);}
+}
+.hero-section,
+.about-section,
+.portfolio-section {
+  opacity: 0;
+  transform: translateY(60px) scale(0.98);
+  animation: fadeInUp 1.2s cubic-bezier(.4,2,.6,1) forwards;
+  will-change: opacity, transform;
+}
+.hero-section { animation-delay: 0.2s; }
+.about-section { animation-delay: 0.5s; }
+.portfolio-section { animation-delay: 0.8s; }
+
+@keyframes cardPop {
+  0% { opacity: 0; transform: scale(0.9) translateY(40px);}
+  80% { transform: scale(1.03);}
+  100% { opacity: 1; transform: scale(1) translateY(0);}
+}
+.project-card:nth-child(1) { animation-delay: 1.1s; }
+.project-card:nth-child(2) { animation-delay: 1.3s; }
+/* Add more nth-child rules for more cards */
+
+@keyframes slideInFooter {
+  from { opacity: 0; transform: translateY(60px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+#footer, .footer {
+  background: linear-gradient(90deg, #222 60%, #ff9800 100%);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0 1.5rem 0;
+  font-size: 1.1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+  margin-top: 3rem;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: slideInFooter 1.2s cubic-bezier(.4,2,.6,1) 1.5s forwards;
+}
+
+#footer nav ul,
+.footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+#footer nav ul li,
+.footer nav ul li {
+  display: inline;
+}
+
+#footer nav a,
+.footer nav a {
+  color: #ff9800;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  padding: 0.3rem 0.8rem;
+  border-radius: 5px;
+}
+
+#footer nav a:hover,
+.footer nav a:hover {
+  background: #ff9800;
+  color: #fff;
+>>>>>>> c756519 (Save current progress: animations, header/footer includes, and layout updates)
+}

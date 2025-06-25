@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <div id="header"></div>
+  <script>
+    fetch('../parts/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+  <section class="hero-section">
+    <div class="container">
+      <h1>Welcome to My Portfolio</h1>
+      <p>I am a creative professional specializing in design and development.</p>
+      <a href="#portfolio" class="btn">Explore My Work</a>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Write about yourself here...</p>
+    </div>
+  </section>
+
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <h2>Recent Projects</h2>
+      <div class="projects">
+
+        <div class="project-card">
+          <img src="path/to/image1.jpg" alt="Project 1">
+          <h3>Project 1</h3>
+          <p>Description of Project 1</p>
+        </div>
+
+        <div class="project-card">
+          <img src="path/to/image2.jpg" alt="Project 2">
+          <h3>Project 2</h3>
+          <p>Description of Project 2</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+<script>
+  fetch('../parts/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+
+<script>
+document.querySelectorAll('.hero-section, .about-section, .portfolio-section, .project-card').forEach(el => {
+  el.classList.add('animate-on-scroll');
+});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'none';
+      entry.target.style.animationPlayState = 'running';
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!-- templates/singular.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singular Post</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <?php include 'parts/header.html'; ?>
+
+  <section class="singular-section">
+    <div class="container">
+      <h1><?php echo get_the_title(); ?></h1>
+      <div class="content">
+        <?php the_content(); ?>
+      </div>
+    </div>
+  </section>
+
+  <?php include 'parts/footer.html'; ?>
+</body>
+</html>

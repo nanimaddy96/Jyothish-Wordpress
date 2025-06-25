@@ -1,0 +1,125 @@
+<<<<<<< HEAD
+{
+    "version": 2,
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "800px",
+            "wideSize": "1200px"
+        },
+        "color": {
+            "palette": [
+                {
+                    "name": "Primary",
+                    "slug": "primary",
+                    "color": "#3366cc"
+                },
+                {
+                    "name": "Secondary",
+                    "slug": "secondary",
+                    "color": "#ff6600"
+                },
+                {
+                    "name": "Dark",
+                    "slug": "dark",
+                    "color": "#222222"
+                },
+                {
+                    "name": "Light",
+                    "slug": "light",
+                    "color": "#f8f9fa"
+                }
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "name": "System",
+                    "slug": "system-font",
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif"
+                }
+            ],
+            "fontSizes": [
+                {
+                    "name": "Small",
+                    "slug": "small",
+                    "size": "0.875rem"
+                },
+                {
+                    "name": "Medium",
+                    "slug": "medium",
+                    "size": "1rem"
+                },
+                {
+                    "name": "Large",
+                    "slug": "large",
+                    "size": "1.5rem"
+                },
+                {
+                    "name": "Extra Large",
+                    "slug": "extra-large",
+                    "size": "2rem"
+                }
+            ]
+        }
+    },
+    "styles": {
+        "color": {
+            "background": "var(--wp--preset--color--light)",
+            "text": "var(--wp--preset--color--dark)"
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--system-font)",
+            "fontSize": "var(--wp--preset--font-size--medium)"
+        },
+        "elements": {
+            "heading": {
+                "typography": {
+                    "fontWeight": "700",
+                    "lineHeight": "1.3"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var(--wp--preset--color--primary)"
+                },
+                ":hover": {
+                    "color": {
+                        "text": "var(--wp--preset--color--secondary)"
+                    }
+                }
+            }
+        }
+    }
+=======
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json ",
+  "version": 2,
+  "settings": {
+    "color": {
+      "default": "#000000",
+      "foreground": "#ffffff",
+      "background": "#f4f4f4"
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "small",
+          "size": "14px",
+          "slug": "small"
+        },
+        {
+          "name": "medium",
+          "size": "18px",
+          "slug": "medium"
+        },
+        {
+          "name": "large",
+          "size": "24px",
+          "slug": "large"
+        }
+      ]
+    }
+  }
+>>>>>>> c756519 (Save current progress: animations, header/footer includes, and layout updates)
+}
